@@ -1,0 +1,14 @@
+name: CI
+
+on:
+  push:
+    branches: [ "feature/*" ]
+
+jobs:
+  editorconfig:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: editorconfig-checker/action-editorconfig-checker@main
+      - run: editorconfig-checker
+
+
